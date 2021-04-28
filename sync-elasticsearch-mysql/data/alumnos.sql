@@ -57,11 +57,11 @@ UNLOCK TABLES;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`%`*/ /*!50003 TRIGGER `books_after_insert` AFTER INSERT ON `books` FOR EACH ROW INSERT INTO books.books_journal
-/*	SET
-/*		action_type = 'create',
-/*		isbn = NEW.isbn,
-/*		action_time = now() */;;
-/*DELIMITER ;
+	SET
+		action_type = 'create',
+		isbn = NEW.isbn,
+		action_time = now() */;;
+DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
@@ -74,7 +74,7 @@ DELIMITER ;;
 /*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
-/*DELIMITER ;;
+DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`%`*/ /*!50003 TRIGGER `books_after_update` AFTER UPDATE ON `books` FOR EACH ROW IF NEW.isbn = OLD.isbn THEN
 /*		INSERT INTO books.books_journal
 /*		SET action_type = 'update',
@@ -92,7 +92,7 @@ DELIMITER ;;
 /*			isbn = NEW.isbn,
 /*			action_time = NOW();
 /*	END IF */;;
-/*DELIMITER ;
+DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
@@ -105,12 +105,12 @@ DELIMITER ;;
 /*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
-/*DELIMITER ;;
+DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`%`*/ /*!50003 TRIGGER `books_after_delete` AFTER DELETE ON `books` FOR EACH ROW INSERT INTO books.books_journal
 /*	SET action_type = 'delete',
 /*		isbn = OLD.isbn,
 /*		action_time = now() */;;
-/*DELIMITER ;
+DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
