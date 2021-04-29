@@ -54,7 +54,7 @@ exit-after-direct-reads = false
 #se realizan cambios para llamar a la coleccion docentes
 [[mapping]]
 namespace = "dbdata.docentes"
-index = "dataintelindex_docentes"
+index = "index_docentes"
 
 [[script]]
 namespace = "dbdata.docentes"

@@ -53,7 +53,7 @@ services:
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: "yes"
       MYSQL_DATABASE: alumnos
-      MYSQL_USER: avid_reader
+      MYSQL_USER: student_user
       MYSQL_PASSWORD: i_love_alumnos
     volumes:
       # Dump files for initiating tables
