@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.22, for Linux (x86_64)
 --
--- Host: localhost    Database: books
+-- Host: localhost    Database: alumnos
 -- ------------------------------------------------------
 -- Server version	8.0.22
 
@@ -36,8 +36,8 @@ CREATE TABLE `alumnos_journal` (
 --
 
 LOCK TABLES `alumnos_journal` WRITE;
-/*!40000 ALTER TABLE `books_journal` DISABLE KEYS */;
-/*!40000 ALTER TABLE `books_journal` ENABLE KEYS */;
+/*!40000 ALTER TABLE `alumnos_journal` DISABLE KEYS */;
+/*!40000 ALTER TABLE `alumnos_journal` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
