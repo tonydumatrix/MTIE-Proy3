@@ -27,7 +27,7 @@ services:
     volumes:
         - /home/docker/startbootstrap-one-page-wonder/:/usr/share/nginx/html
     environment:
-        - VIRTUAL_HOST=portal.midominiomtie.net
+        - VIRTUAL_HOST=portal.mtiemarco.net
 
   ###############################
   # Sitio de prueba2 bienvenida #
@@ -39,7 +39,7 @@ services:
     volumes:
         - /home/docker/startbootstrap-heroic-features/:/usr/share/nginx/html
     environment:
-        - VIRTUAL_HOST=inicio.midominiomtie.net
+        - VIRTUAL_HOST=inicio.mtiemarco.net
 
   ###################
   # MySQL Container #
@@ -141,7 +141,7 @@ services:
     container_name: MTIE-Kibana
     environment:
       - ELASTICSEARCH_HOSTS=http://172.17.94.126:9200
-      - VIRTUAL_HOST=kibana.midominiomtie.net
+      - VIRTUAL_HOST=kibana.mtiemarco.net
     #ports:
     #  - 5601:5601
     depends_on:
@@ -186,7 +186,7 @@ services:
     security_opt:
       - apparmor=unconfined
     environment:
-      - VIRTUAL_HOST=monitor.midominiomtie.net
+      - VIRTUAL_HOST=monitor.mtiemarco.net
       - VIRTUAL_PORT=19999
       - DOCKER_HOST=proxy:2375
       - PGID=999
