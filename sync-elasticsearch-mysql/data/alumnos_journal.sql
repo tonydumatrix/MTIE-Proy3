@@ -16,7 +16,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `books_journal`
+-- Table structure for table `alumnos_journal`
 --
 
 DROP TABLE IF EXISTS `alumnos_journal`;
@@ -32,7 +32,7 @@ CREATE TABLE `alumnos_journal` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `books_journal`
+-- Dumping data for table `alumnos_journal`
 --
 
 LOCK TABLES `alumnos_journal` WRITE;
