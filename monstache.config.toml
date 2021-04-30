@@ -6,7 +6,7 @@ elasticsearch-max-conns = 10
 #direct-read-namespaces = ["dbdata.economico"]
 #change-stream-namespaces = ["dbdata.economico"]
 # se agrega la coleccion de docentes
-change-stream-namespaces = ["dbdata.docentes"]
+change-stream-namespaces = ["dbdata.docentes","dbdata.teams"]
 index-as-update = true
 elasticsearch-max-seconds = 5
 enable-http-server = true
@@ -75,6 +75,31 @@ module.exports = function(doc) {
     materia: doc.materia,
     hrssemana: doc.hrssemana,
     dia: doc.dia,
+    corte: doc.corte
+  }
+  return newdoc;
+}
+"""
+
+#se realizan cambios para llamar a la coleccion teams
+[[mapping]]
+namespace = "dbdata.teams"
+index = "index_teams"
+
+[[script]]
+namespace = "dbdata.teams"
+script = """
+module.exports = function(doc) {
+  var newdoc = {
+    nombre: doc.nombre,
+    correo: doc.correo,
+    mensajeschat: doc.mensajeschat,
+    reunionesorganizadas: doc.reunionesorganizadas,
+    reunionesparticipadas: doc.reunionesparticipadas,
+    llamadas: doc.llamadas,
+    audiotime: doc.audiotime,
+    videotime: doc.videotime,
+    screentime: doc.screentime,
     corte: doc.corte
   }
   return newdoc;
